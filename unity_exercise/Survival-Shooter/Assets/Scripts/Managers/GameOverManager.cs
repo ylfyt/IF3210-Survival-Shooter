@@ -10,6 +10,8 @@ public class GameOverManager : MonoBehaviour
     Animator anim;
     float restartTimer;
 
+    bool isGameOver = false;
+
 
     void Awake()
     {
@@ -21,7 +23,8 @@ public class GameOverManager : MonoBehaviour
     {
         if (playerHealth.currentHealth <= 0)
         {
-            anim.SetTrigger("GameOver");
+            anim.SetBool("GameOver", true);
+            isGameOver = true;
 
             restartTimer += Time.deltaTime;
 
@@ -34,6 +37,10 @@ public class GameOverManager : MonoBehaviour
 
     public void ShowWarning()
     {
+        if (isGameOver)
+        {
+            return;
+        }
         anim.SetTrigger("Warning");
     }
 }

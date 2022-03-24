@@ -6,6 +6,7 @@ public class PlayerDetector : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+
         if (other.tag == "Enemy" && !other.isTrigger)
         {
             gameOverManager.ShowWarning();
