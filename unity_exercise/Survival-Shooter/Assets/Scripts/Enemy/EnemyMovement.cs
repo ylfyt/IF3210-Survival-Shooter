@@ -20,14 +20,21 @@ public class EnemyMovement : MonoBehaviour
 
     void Update()
     {
-        // if (enemyHealth.currentHealth > 0 && playerHealth.currentHealth > 0)
-        // {
-        //     nav.SetDestination(player.position);
-        // }
-        // else
-        // {
-        //     nav.enabled = false;
-        // }
-        nav.SetDestination(player.position);
+        if (enemyHealth == null)
+        {
+            Debug.Log("EnemyHealt is null");
+        }
+        if (playerHealth == null)
+        {
+            Debug.Log("PlayerHealth is null");
+        }
+        if (enemyHealth.currentHealth > 0 && playerHealth.currentHealth > 0)
+        {
+            nav.SetDestination(player.position);
+        }
+        else
+        {
+            nav.enabled = false;
+        }
     }
 }
