@@ -3,12 +3,12 @@ using UnityEngine.SceneManagement;
 
 public class GameOverManager : MonoBehaviour
 {
-    public PlayerHealth playerHealth;       
-    public float restartDelay = 5f;            
+    public PlayerHealth playerHealth;
+    public float restartDelay = 5f;
 
 
-    Animator anim;                          
-    float restartTimer;                    
+    Animator anim;
+    float restartTimer;
 
 
     void Awake()
@@ -30,5 +30,10 @@ public class GameOverManager : MonoBehaviour
                 SceneManager.LoadScene(SceneManager.GetActiveScene().name);
             }
         }
+    }
+
+    public void ShowWarning()
+    {
+        anim.SetTrigger("Warning");
     }
 }
