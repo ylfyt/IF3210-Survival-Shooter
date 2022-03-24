@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2063190824527065744}
   - component: {fileID: 2063190824515068920}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Zombunny
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -103,7 +103,7 @@ GameObject:
   - component: {fileID: 2063190824526669888}
   - component: {fileID: 3274005569298217755}
   - component: {fileID: 6867229126780016190}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Zombunny
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -359,6 +359,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: ef39ae7291c751249b296f00bf6fb042, type: 3}
       propertyPath: m_Name
       value: HitParticles
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: ef39ae7291c751249b296f00bf6fb042, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: ef39ae7291c751249b296f00bf6fb042, type: 3}
       propertyPath: m_RootOrder

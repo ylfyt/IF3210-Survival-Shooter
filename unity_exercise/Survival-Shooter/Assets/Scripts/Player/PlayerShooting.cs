@@ -2,19 +2,20 @@
 
 public class PlayerShooting : MonoBehaviour
 {
-    public int damagePerShot = 20;                  
-    public float timeBetweenBullets = 0.15f;        
-    public float range = 100f;                      
+    public int damagePerShot = 20;
+    public float timeBetweenBullets = 0.15f;
+    public float range = 100f;
+    public Transform gunPoint;
 
-    float timer;                                    
-    Ray shootRay;                                   
-    RaycastHit shootHit;                            
-    int shootableMask;                             
-    ParticleSystem gunParticles;                    
-    LineRenderer gunLine;                           
-    AudioSource gunAudio;                           
-    Light gunLight;                                 
-    float effectsDisplayTime = 0.2f;                
+    float timer;
+    Ray shootRay;
+    RaycastHit shootHit;
+    int shootableMask;
+    ParticleSystem gunParticles;
+    LineRenderer gunLine;
+    AudioSource gunAudio;
+    Light gunLight;
+    float effectsDisplayTime = 0.2f;
 
     void Awake()
     {
